@@ -3,7 +3,23 @@ package main.java;
 public class Rechner {
 
     public int plus(int summand1, int summand2) {
-        return summand1 + summand2;
+        if (summand1 <= 1000) {
+            if (summand2 <= 1000) {
+                if (summand1 >= -1000) {
+                    if (summand2 >= -1000) {
+                        return summand1 + summand2;
+                    } else {
+                        throw new IllegalArgumentException("Summand darf nicht kleiner als -1000 sein!");
+                    }
+                } else {
+                    throw new IllegalArgumentException("Summand darf nicht kleiner als -1000 sein!");
+                }
+            } else {
+                throw new IllegalArgumentException("Summand darf nicht größer als 1000 sein!");
+            }
+        } else {
+            throw new IllegalArgumentException("Summand darf nicht größer als 1000 sein!");
+        }
     }
 
     public int minus(int minuend, int subtrahend) {
@@ -11,7 +27,11 @@ public class Rechner {
     }
 
     public int mal(int faktor1, int faktor2) {
-        return faktor1 * faktor2;
+        int ergebnis = faktor1;
+        for (int i = 1; i < faktor2; i++) {
+            ergebnis += faktor1;
+        }
+        return ergebnis;
     }
 
     public double geteilt(int dividend, int divisor) {
@@ -19,6 +39,10 @@ public class Rechner {
             throw new IllegalArgumentException("Divisor darf nicht 0 sein!");
         }
         return (double) dividend / divisor;
+    }
+
+    public double hoch(int basis, int potenz) {
+        return Math.pow(potenz, basis);
     }
 
     public int ultimativeAntwort(String frage) {
