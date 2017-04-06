@@ -1,0 +1,8 @@
+# IntellijIdea
+*.iml
+.idea
+# Eclipse
+.project
+.metadata
+# compiled sources
+target
