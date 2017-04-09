@@ -1,4 +1,4 @@
-package main.java;
+package elektro.rechen;
 
 public class Rechner {
 

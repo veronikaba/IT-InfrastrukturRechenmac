@@ -1,9 +1,7 @@
-package test.java;
+package elektro.rechen;
 
-import main.java.Rechner;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import elektro.rechen.Rechner;
+import org.junit.*;
 
 import static org.junit.Assert.assertEquals;
 
