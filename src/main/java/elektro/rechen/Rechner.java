@@ -36,9 +36,8 @@ public class Rechner {
     }
 
     public double geteilt(int dividend, int divisor) {
-        if (divisor == 0) { // division by 0 is illegal
+        if (divisor == 0)  // division by 0 is illegal
             throw new IllegalArgumentException("Divisor darf nicht 0 sein!");
-        }
         return (double) dividend / divisor;
     }
 
