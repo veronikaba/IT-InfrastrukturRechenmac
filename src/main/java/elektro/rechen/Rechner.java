@@ -2,6 +2,7 @@ package elektro.rechen;
 
 public class Rechner {
 
+    // FIXME extract 1000 / -1000 as upper and lower boundary to class variable
     public int plus(int summand1, int summand2) {
         if (summand1 <= 1000) {
             if (summand2 <= 1000) {
@@ -35,7 +36,7 @@ public class Rechner {
     }
 
     public double geteilt(int dividend, int divisor) {
-        if (divisor == 0) {
+        if (divisor == 0) { // division by 0 is illegal
             throw new IllegalArgumentException("Divisor darf nicht 0 sein!");
         }
         return (double) dividend / divisor;

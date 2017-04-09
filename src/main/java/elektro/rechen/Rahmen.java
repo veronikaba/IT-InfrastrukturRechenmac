@@ -27,6 +27,7 @@ public class Rahmen extends JFrame {
     }
 
     public JPanel initPlusPanel() {
+        // TODO extract panel creation to its own class
         JTextField textFieldPlus1 = new JTextField(8);
         JLabel labelPlus = new JLabel(" + ");
         JTextField textFieldPlus2 = new JTextField(8);
