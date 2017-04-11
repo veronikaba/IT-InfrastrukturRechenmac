@@ -18,7 +18,6 @@ public class Rahmen extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(0, 1));
         panel.setVisible(true);
-        panel.setBackground(Color.GREEN);
 
         getContentPane().add(initPlusPanel());
         getContentPane().add(initMinusPanel());
