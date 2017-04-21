@@ -32,4 +32,10 @@ public class RechnerTest {
 
     @Test
     public void smokeTestHoch() { assertTrue(rechner.hoch(4,3) ==64);}
+
+    @Test (expected = IllegalArgumentException.class)
+    public void throwsExeptionIfPlusMethodIsCalled(){
+        rechner.plus(1300, -2000);
+    }
+
 }
