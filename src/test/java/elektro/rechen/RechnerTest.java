@@ -19,4 +19,7 @@ public class RechnerTest {
         assertEquals(rechner.plus(2, 3), 5);
     }
 
+    @Test
+    public void smokeTestMinus() { assertEquals(rechner.minus(4,2), 2);}
+
 }
