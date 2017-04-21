@@ -4,23 +4,13 @@ public class Rechner {
 
     // FIXME extract 1000 / -1000 as upper and lower boundary to class variable
     public int plus(int summand1, int summand2) {
-        if (summand1 <= 1000) {
-            if (summand2 <= 1000) {
-                if (summand1 >= -1000) {
-                    if (summand2 >= -1000) {
-                        return summand1 + summand2;
-                    } else {
-                        throw new IllegalArgumentException("Summand darf nicht kleiner als -1000 sein!");
-                    }
-                } else {
-                    throw new IllegalArgumentException("Summand darf nicht kleiner als -1000 sein!");
-                }
-            } else {
-                throw new IllegalArgumentException("Summand darf nicht größer als 1000 sein!");
-            }
-        } else {
+
+        if (summand1 > 1000 || summand2 > 1000) {
             throw new IllegalArgumentException("Summand darf nicht größer als 1000 sein!");
+        } else if (summand1 < -1000 || summand2 < -1000) {
+            throw new IllegalArgumentException("Summand darf nicht kleiner als -1000 sein!");
         }
+        else return summand1+summand2;
     }
 
     public int minus(int minuend, int subtrahend) {
